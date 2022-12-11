@@ -70,7 +70,7 @@ wr
 copy running-config startup-config
 ```
 
-R4 port
+R4 port 32772
 ```
 enable
 conf t
