@@ -1,19 +1,20 @@
 VPC left
-`
+```
 ip 10.0.10.1/24 10.0.10.2
 
 save
-`
+```
 
 VPC right
-`
+```
 ip 10.0.20.1/24 10.0.20.2
 
 save
-`
+```
 
 R6 port 32774
-`enable
+```
+enable
 conf t
 vlan 10
 vlan 20
@@ -39,10 +40,12 @@ switchport mode trunk
 exit
 exit
 wr
-copy running-config startup-config`
+copy running-config startup-config
+```
 
 R1 port 32769
-`enable
+```
+enable
 conf t
 vlan 10
 vlan 20
@@ -64,10 +67,12 @@ switch access vlan 10
 exit
 exit
 wr
-copy running-config startup-config`
+copy running-config startup-config
+```
 
 R4 port
-`enable
+```
+enable
 conf t
 vlan 10
 vlan 20
@@ -89,5 +94,6 @@ switch access vlan 10
 exit
 exit
 wr
-copy running-config startup-config`
+copy running-config startup-config
+```
 
