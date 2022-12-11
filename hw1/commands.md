@@ -1,4 +1,4 @@
-[scheme.png]
+(scheme)[scheme.png]
 
 VPC left
 ```
