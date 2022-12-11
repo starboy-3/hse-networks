@@ -97,3 +97,22 @@ wr
 copy running-config startup-config
 ```
 
+R5 port 32773
+```
+enable
+conf t
+interface e0/0
+no shutdown
+interface e0/0.10
+encapsulation dot1q 10   
+ip address 10.0.10.2 255.255.255.0
+exit
+interface e0/0
+no shutdown
+interface e0/0.20
+encapsulation dot1q 20   
+ip address 10.0.20.2 255.255.255.0
+exit
+do write
+exit
+```
