@@ -1,3 +1,5 @@
+[scheme.png]
+
 VPC left
 `
 ip 10.0.10.1/24 10.0.10.2
