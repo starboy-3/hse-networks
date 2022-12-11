@@ -151,7 +151,7 @@ switchport mode trunk
 exit
 interface e0/0
 switch mode access
-switch access vlan 10
+switch access vlan 20
 exit
 exit
 wr
