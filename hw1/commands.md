@@ -115,4 +115,6 @@ ip address 10.0.20.2 255.255.255.0
 exit
 do write
 exit
+wr
+copy running-config startup-config
 ```
