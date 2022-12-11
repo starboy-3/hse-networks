@@ -2,10 +2,14 @@
 
 #root@eve-ng:/opt/unetlab/tmp/0/d93fe442-2cfb-4fc7-bc19-0f374a2d3962# ls
 #1  10  11  12  13  14  15  16  17  18  19  2  20  21  22  23  24  25  26  27  28  29  3  30  31  32  4  5  7  8  9
-devices=(1  2  3  4  5  6)
-LAB_PATH='/opt/unetlab/tmp/0/82c31f50-1a69-42e0-ac51-c5dfe49edb4c'
-LAB_FILE='/opt/unetlab/labs/1st.unl'
-HW_PATH="/Users/akosimov/Downloads/hse-networks/hw1"
+# hw1 82c31f50-1a69-42e0-ac51-c5dfe49edb4c
+# devices=(1  2  3  4  5  6)
+
+# hw3 a231f3ab-1362-4824-94c7-21ec4d2f5ff7
+devices=(1  2  3  4  5  6  7)
+LAB_PATH='/opt/unetlab/tmp/0/a231f3ab-1362-4824-94c7-21ec4d2f5ff7'
+LAB_FILE='/opt/unetlab/labs/hw2/2nd.unl'
+HW_PATH="/Users/akosimov/Downloads/hse-networks/hw3"
 
 
 
@@ -18,6 +22,8 @@ ssh $USER@$HOST "/opt/unetlab/wrappers/unl_wrapper -a export -F $LAB_FILE -T 0"
 echo "wipe and start all devices. It's need for saving fresh startup-configs"
 ssh $USER@$HOST "/opt/unetlab/wrappers/unl_wrapper -a wipe -F $LAB_FILE -T 0"
 ssh $USER@$HOST "/opt/unetlab/wrappers/unl_wrapper -a start -F $LAB_FILE -T 0"
+
+scp $USER@$HOST:$LAB_FILE $HW_PATH
 
 for device in ${devices[*]}
 do
