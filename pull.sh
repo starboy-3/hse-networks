@@ -23,6 +23,7 @@ echo "wipe and start all devices. It's need for saving fresh startup-configs"
 ssh $USER@$HOST "/opt/unetlab/wrappers/unl_wrapper -a wipe -F $LAB_FILE -T 0"
 ssh $USER@$HOST "/opt/unetlab/wrappers/unl_wrapper -a start -F $LAB_FILE -T 0"
 
+echo "copying config $LAB_FILE"
 scp $USER@$HOST:$LAB_FILE $HW_PATH
 
 for device in ${devices[*]}
