@@ -199,3 +199,5 @@ exit
 wr
 copy running-config startup-config
 ```
+
+![alt text](ping.png "Scheme")
