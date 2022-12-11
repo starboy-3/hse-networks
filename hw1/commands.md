@@ -1,13 +1,13 @@
-(scheme)[scheme.png]
+![alt text](scheme.png "Scheme")
 
-VPC left
+VPC(2) left
 ```
 ip 10.0.10.1/24 10.0.10.2
 
 save
 ```
 
-VPC right
+VPC(2) right
 ```
 ip 10.0.20.1/24 10.0.20.2
 
