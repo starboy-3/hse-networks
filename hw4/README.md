@@ -63,6 +63,9 @@ exit
 interface tunnel200
 tunnel protection ipsec profile protect-gre
 exit
+exit
+wr
+copy running-config startup-config
 ```
 
 R2
@@ -77,6 +80,9 @@ interface e0/1
 ip address 1.1.20.1 255.255.255.0
 no shutdown
 exit
+exit
+wr
+copy running-config startup-config
 ```
 
 R3
