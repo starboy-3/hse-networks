@@ -8,8 +8,8 @@
 # hw3 a231f3ab-1362-4824-94c7-21ec4d2f5ff7
 devices=(1  2  3  4  5  6  7)
 LAB_PATH='/opt/unetlab/tmp/0/a231f3ab-1362-4824-94c7-21ec4d2f5ff7'
-LAB_FILE='/opt/unetlab/labs/hw2/2nd.unl'
-HW_PATH="/Users/akosimov/Downloads/hse-networks/hw3"
+LAB_FILE='/opt/unetlab/labs/hw1/1st.unl'
+HW_PATH="/Users/akosimov/Downloads/hse-networks/hw1"
 
 
 
