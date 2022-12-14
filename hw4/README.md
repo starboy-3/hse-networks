@@ -21,14 +21,14 @@ enable
 conf t
 interface e0/0
 no shutdown
-ip address 10.0.10.1/24
+ip address 10.0.10.1 255.255.255.0
 exit
 interface e0/1
-ip address 1.1.10.2/24
+ip address 1.1.10.2 255.255.255.0
 no shutdown
 exit
 interface 100tunnel
-ip address 172.16.10.1/24
+ip address 172.16.10.1 255.255.255.0
 ip mtu 1400
 ip tcp adjust-mss 1360
 tunnel source 1.1.10.2
@@ -38,7 +38,7 @@ ip route 0.0.0.0 0.0.0.0 1.1.10.1
 ip route 10.0.20.2 255.255.255.255 172.16.10.2
 
 interface 200tunnel
-ip address 172.16.11.1/24
+ip address 172.16.11.1 255.255.255.0
 ip mtu 1400
 ip tcp adjust-mss 1360
 tunnel source 1.1.10.2
@@ -71,10 +71,10 @@ enable
 conf t
 interface e0/0
 no shutdown
-ip address 1.1.10.1/24
+ip address 1.1.10.1 255.255.255.0
 exit
 interface e0/1
-ip address 1.1.20.1/24
+ip address 1.1.20.1 255.255.255.0
 no shutdown
 exit
 ```
@@ -85,13 +85,13 @@ enable
 conf t
 interface e0/0
 no shutdown
-ip address 1.1.20.2/24
+ip address 1.1.20.2 255.255.255.0
 interface e0/1
 no shutdown
-ip address 10.0.20.1/24
+ip address 10.0.20.1 255.255.255.0
 exit
 interface 100tunnel
-ip address 172.16.10.2/24
+ip address 172.16.10.2 255.255.255.0
 ip mtu 1400
 ip tcp adjust-mss 1360
 tunnel source 1.1.20.2
@@ -108,14 +108,14 @@ enable
 conf t
 interface e0/0
 no shutdown
-ip address 1.1.30.2/24
+ip address 1.1.30.2 255.255.255.0
 exit
 interface e0/1
 no shutdown
-ip address 10.0.30.1/24
+ip address 10.0.30.1 255.255.255.0
 exit
 interface 200tunnel
-ip address 172.16.11.2/24
+ip address 172.16.11.2 255.255.255.0
 ip mtu 1400
 ip tcp adjust-mss 1360
 tunnel source 1.1.30.2
