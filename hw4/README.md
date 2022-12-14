@@ -128,7 +128,6 @@ tunnel source 1.1.30.2
 tunnel destination 1.1.10.2
 exit
 ip route 0.0.0.0 0.0.0.0 1.1.30.1
-exit
 ip route 10.0.10.2 255.255.255.255 172.16.11.1
 crypto isakmp policy 1
 encr 3des
