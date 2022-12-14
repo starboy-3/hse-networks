@@ -140,7 +140,7 @@ crypto ipsec profile protect-gre
 set security-association lifetime seconds 86400
 set transform-set TS
 exit
-interface Tunnel 200
+interface 200tunnel
 tunnel protection ipsec profile protect-gre
 exit
 exit
