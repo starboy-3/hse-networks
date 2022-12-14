@@ -27,7 +27,7 @@ interface e0/1
 ip address 1.1.10.2 255.255.255.0
 no shutdown
 exit
-interface 100tunnel
+interface tunnel100
 ip address 172.16.10.1 255.255.255.0
 ip mtu 1400
 ip tcp adjust-mss 1360
@@ -37,7 +37,7 @@ exit
 ip route 0.0.0.0 0.0.0.0 1.1.10.1
 ip route 10.0.20.2 255.255.255.255 172.16.10.2
 
-interface 200tunnel
+interface tunnel200
 ip address 172.16.11.1 255.255.255.0
 ip mtu 1400
 ip tcp adjust-mss 1360
@@ -60,7 +60,7 @@ crypto ipsec profile protect-gre
 set security-association lifetime seconds 86400
 set transform-set TS
 exit
-interface 200tunnel
+interface tunnel200
 tunnel protection ipsec profile protect-gre
 exit
 ```
@@ -90,7 +90,7 @@ interface e0/1
 no shutdown
 ip address 10.0.20.1 255.255.255.0
 exit
-interface 100tunnel
+interface tunnel100
 ip address 172.16.10.2 255.255.255.0
 ip mtu 1400
 ip tcp adjust-mss 1360
@@ -114,7 +114,7 @@ interface e0/1
 no shutdown
 ip address 10.0.30.1 255.255.255.0
 exit
-interface 200tunnel
+interface tunnel200
 ip address 172.16.11.2 255.255.255.0
 ip mtu 1400
 ip tcp adjust-mss 1360
@@ -140,7 +140,7 @@ crypto ipsec profile protect-gre
 set security-association lifetime seconds 86400
 set transform-set TS
 exit
-interface 200tunnel
+interface tunnel200
 tunnel protection ipsec profile protect-gre
 exit
 exit
