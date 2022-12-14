@@ -114,7 +114,7 @@ interface e0/1
 no shutdown
 ip address 10.0.30.1 255.255.255.0
 exit
-interface tunnel200
+interface Tunnel200
 ip address 172.16.11.2 255.255.255.0
 ip mtu 1400
 ip tcp adjust-mss 1360
@@ -124,7 +124,6 @@ exit
 ip route 0.0.0.0 0.0.0.0 1.1.30.1
 exit
 ip route 10.0.10.2 255.255.255.255 172.16.11.1
-
 crypto isakmp policy 1
 encr 3des
 hash md5
@@ -140,7 +139,7 @@ crypto ipsec profile protect-gre
 set security-association lifetime seconds 86400
 set transform-set TS
 exit
-interface tunnel200
+interface Tunnel 200
 tunnel protection ipsec profile protect-gre
 exit
 exit
